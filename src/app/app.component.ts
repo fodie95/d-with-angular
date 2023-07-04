@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Host, Optional, Self, SkipSelf } from '@angular/core';
+import { Logger } from './app.module';
+import { PaymentMethod } from './services/payement/payement-method';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'talk';
+
+  constructor() {
+  }
 }

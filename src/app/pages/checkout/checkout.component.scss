@@ -1,0 +1,27 @@
+
+
+@mixin selectionEffect() {
+  border: 1px solid blue;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+
+
+.image-container {
+  width: 100px;
+  height: 100px;
+  &:hover {
+    @include selectionEffect()
+  }
+}
+
+.image-container-selected {
+  @include selectionEffect()
+}
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  :nth-child(2) {
+    width: 30%;
+  }
+}
