@@ -1,11 +1,12 @@
-import { PaymentMethod } from 'src/app/services/payement/payement-method';
+import {  PaymentMethod } from 'src/app/services/payement/payement-method';
 import { PayementMethodManagerService } from './../../services/payement/payement-method-manager.service';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
-  styleUrls: ['./checkout.component.scss']
+  styleUrls: ['./checkout.component.scss'],
+
 })
 export class CheckoutComponent {
 

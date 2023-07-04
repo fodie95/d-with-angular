@@ -1,4 +1,3 @@
-import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
 
 
@@ -18,7 +17,6 @@ export interface PaymentMethodInfo {
   transactionCost : number
 }
 
-@Injectable()
 export abstract class PaymentMethod {
   abstract name:string
   abstract banner : string
@@ -41,10 +39,23 @@ export class BankilyService  extends  PaymentMethod {
 
 }
 
+
 export class MasrviService extends PaymentMethod {
   override name: string = "MASRVI";
   override banner: string =  "masrvi.png";
   override pay(request: PaymentRequest): Observable<PaymentResponse> {
     throw new Error("Method not implemented.");
   }
+
+}
+
+
+
+export class ClickService extends PaymentMethod {
+  override name: string = "CLICK";
+  override banner: string =  "click.png";
+  override pay(request: PaymentRequest): Observable<PaymentResponse> {
+    throw new Error("Method not implemented.");
+  }
+
 }
